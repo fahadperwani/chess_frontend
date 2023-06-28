@@ -1,0 +1,34 @@
+.row {
+    display: flex;
+}
+
+.box {
+    width: 70px;
+    height: 70px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.box.white {
+    background-color: lightsteelblue;
+    border: 1px solid lightsteelblue;
+}
+
+.box.black {
+    background-color: steelblue;
+    border: 1px solid steelblue;
+}
+
+.box.move::before {
+    content: "";
+    width: 50%;
+    position: absolute;
+    height: 50%;
+    background-color: rgba(255, 255, 255, 0.2);
+    border-radius: 50%;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
